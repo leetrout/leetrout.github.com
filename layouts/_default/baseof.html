@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="h-full bg-zinc-100">
+  <head>
+    {{ $scripts := resources.Get "scripts.js" }}
+    <script>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+        localStorage.theme = "dark";
+      } else {
+        document.documentElement.classList.remove("dark");
+        localStorage.theme = "light";
+      }
+    </script>
+    <script defer src="{{ $scripts.Permalink }}"></script>
+    {{ $style := resources.Get "styles.css" }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.Permalink }}" />
+  </head>
+  <body class="h-full">
+    <div class="min-h-full">
+      <div class="bg-zinc-800 pb-32">
+        <nav class="bg-zinc-800">
+          <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="border-b border-zinc-700">
+              <div class="flex h-16 items-center justify-between px-4 sm:px-0">
+                <div class="flex items-center">
+                  <div class="flex-shrink-0">
+                    <!-- TODO: Change to lunchbox? -->
+                    <svg
+                      width="30"
+                      height="30"
+                      viewBox="0 0 512 512"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g filter="url(#filter0_i_1_2)">
+                        <circle cx="256" cy="256" r="236" fill="#F4F4F5" />
+                      </g>
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M256 506C394.071 506 506 394.071 506 256C506 117.929 394.071 6 256 6C117.929 6 6 117.929 6 256C6 394.071 117.929 506 256 506ZM256 492C386.339 492 492 386.339 492 256C492 125.661 386.339 20 256 20C125.661 20 20 125.661 20 256C20 386.339 125.661 492 256 492Z"
+                        fill="#71717A"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M177 69H207L207 250L347 250V280H277L277 460H247L247 280H177V69Z"
+                        fill="#27272A"
+                      />
+                      <defs>
+                        <filter
+                          id="filter0_i_1_2"
+                          x="20"
+                          y="20"
+                          width="472"
+                          height="474"
+                          filterUnits="userSpaceOnUse"
+                          color-interpolation-filters="sRGB"
+                        >
+                          <feFlood
+                            flood-opacity="0"
+                            result="BackgroundImageFix"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in="SourceGraphic"
+                            in2="BackgroundImageFix"
+                            result="shape"
+                          />
+                          <feColorMatrix
+                            in="SourceAlpha"
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                            result="hardAlpha"
+                          />
+                          <feOffset dy="2" />
+                          <feGaussianBlur stdDeviation="4" />
+                          <feComposite
+                            in2="hardAlpha"
+                            operator="arithmetic"
+                            k2="-1"
+                            k3="1"
+                          />
+                          <feColorMatrix
+                            type="matrix"
+                            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                          />
+                          <feBlend
+                            mode="normal"
+                            in2="shape"
+                            result="effect1_innerShadow_1_2"
+                          />
+                        </filter>
+                      </defs>
+                    </svg>
+                  </div>
+                  <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                      <!-- Current: "bg-zinc-900 text-white", Default: "text-zinc-300 hover:bg-zinc-700 hover:text-white" -->
+                      <a
+                        href="#"
+                        class="bg-zinc-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                        aria-current="page"
+                        >Dashboard</a
+                      >
+
+                      <a
+                        href="#"
+                        class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        >Team</a
+                      >
+
+                      <a
+                        href="#"
+                        class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        >Projects</a
+                      >
+
+                      <a
+                        href="#"
+                        class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        >Calendar</a
+                      >
+
+                      <a
+                        href="#"
+                        class="text-zinc-300 hover:bg-zinc-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                        >Reports</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="hidden md:block">
+                  <div class="ml-4 flex items-center md:ml-6">
+                    <div x-data="themeswitcher" class="relative">
+                      <button
+                        type="button"
+                        @click="toggle"
+                        class="inline-flex items-center rounded border border-transparent bg-zinc-600 px-2.5 py-1.5 text-xs font-medium text-white shadow-sm hover:bg-zinc-700 focus:outline-none"
+                        x-text="label"
+                      ></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                  <!-- Mobile menu button -->
+                  <button
+                    type="button"
+                    class="inline-flex items-center justify-center rounded-md bg-zinc-800 p-2 text-zinc-400 hover:bg-zinc-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zinc-800"
+                    aria-controls="mobile-menu"
+                    aria-expanded="false"
+                  >
+                    <span class="sr-only">Open main menu</span>
+                    <!--
+                  Heroicon name: outline/bars-3
+
+                  Menu open: "hidden", Menu closed: "block"
+                -->
+                    <svg
+                      class="block h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                      />
+                    </svg>
+                    <!--
+                  Heroicon name: outline/x-mark
+
+                  Menu open: "block", Menu closed: "hidden"
+                -->
+                    <svg
+                      class="hidden h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M6 18L18 6M6 6l12 12"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile menu, show/hide based on menu state. -->
+          <div class="border-b border-zinc-700 md:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 py-3 sm:px-3">
+              <!-- Current: "bg-zinc-900 text-white", Default: "text-zinc-300 hover:bg-zinc-700 hover:text-white" -->
+              <a
+                href="#"
+                class="bg-zinc-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                aria-current="page"
+                >Dashboard</a
+              >
+
+              <a
+                href="#"
+                class="text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >Team</a
+              >
+
+              <a
+                href="#"
+                class="text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >Projects</a
+              >
+
+              <a
+                href="#"
+                class="text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >Calendar</a
+              >
+
+              <a
+                href="#"
+                class="text-zinc-300 hover:bg-zinc-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >Reports</a
+              >
+            </div>
+          </div>
+        </nav>
+
+        <header class="py-10">
+          <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold tracking-tight text-white">
+              Dashboard
+            </h1>
+          </div>
+        </header>
+      </div>
+
+      <main class="-mt-32">
+        <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+          <!-- Replace with your content -->
+          <div class="rounded-lg bg-white px-5 py-6 shadow sm:px-6">
+            <div class="h-96 rounded-lg border-4 border-dashed border-zinc-200">
+              {{ block "main" . }}{{ end }}
+            </div>
+          </div>
+          <!-- /End replace -->
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

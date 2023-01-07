@@ -1,0 +1,32 @@
+{
+  "name": "leetrout.github.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-styles": "npx tailwindcss -i ./assets/base.css -o ./assets/styles.css",
+    "bundle": "esbuild index.js --bundle --outfile=assets/scripts.js --minify --sourcemap",
+    "build-hugo": "hugo -d docs",
+    "build": "npm run build-styles && npm run bundle && npm run build-hugo",
+    "watch": "find . -wholename \"./layouts/*\" -name \"*.html\" -o -name \"index.js\" ! -path \"./node_modules/*\" | entr -r npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leetrout/leetrout.github.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/leetrout/leetrout.github.com/issues"
+  },
+  "homepage": "https://github.com/leetrout/leetrout.github.com#readme",
+  "devDependencies": {
+    "esbuild": "0.16.15",
+    "prettier": "^2.8.2",
+    "tailwindcss": "^3.2.4"
+  },
+  "dependencies": {
+    "alpinejs": "^3.10.5"
+  }
+}
