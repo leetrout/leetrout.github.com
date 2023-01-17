@@ -1,0 +1,13 @@
+debug page All pages
+<pre>
+{{ .Site.AllPages }}
+</pre>
+
+site menu
+<pre>
+    {{ .Site.Menus }}
+    print
+    {{ range .Site.Menus.main }}
+     main menu entry: {{ . }}
+    {{ end }}
+</pre>

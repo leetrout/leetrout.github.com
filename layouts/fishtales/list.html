@@ -1,0 +1,173 @@
+{{ define "header"}} "" {{end }} {{ define "main"}}
+
+<div class="relative bg-white py-16">
+  <div
+    class="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-50 lg:block"
+    aria-hidden="true"
+  ></div>
+  <div class="mx-auto max-w-7xl bg-purple-600 lg:bg-transparent lg:px-8">
+    <div class="lg:grid lg:grid-cols-12">
+      <div
+        class="relative z-10 lg:col-span-4 lg:col-start-1 lg:row-start-1 lg:bg-transparent lg:py-16"
+      >
+        <div
+          class="absolute inset-x-0 h-1/2 bg-gray-50 lg:hidden"
+          aria-hidden="true"
+        ></div>
+        <div class="mx-auto max-w-md px-6 sm:max-w-3xl lg:max-w-none lg:p-0">
+          <div
+            class="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1"
+          >
+            {{ $image := .Resources.GetMatch "cover.jpg" }}
+            <img
+              class="rounded-3xl object-cover object-center shadow-2xl"
+              src="{{ $image.RelPermalink }}"
+              width="{{ $image.Width }}"
+              height="{{ $image.Height }}"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="relative bg-purple-400 lg:col-span-10 lg:col-start-3 lg:row-start-1 lg:grid lg:grid-cols-10 lg:items-center lg:rounded-3xl"
+      >
+        <div
+          class="absolute inset-0 hidden overflow-hidden rounded-3xl lg:block"
+          aria-hidden="true"
+        >
+          <svg
+            class="absolute bottom-full left-full translate-y-1/3 -translate-x-2/3 transform xl:bottom-auto xl:top-0 xl:translate-y-0"
+            width="404"
+            height="384"
+            fill="none"
+            viewBox="0 0 404 384"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  width="4"
+                  height="4"
+                  class="text-purple-500"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width="404"
+              height="384"
+              fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
+            />
+          </svg>
+          <svg
+            class="absolute top-full -translate-y-1/3 -translate-x-1/3 transform xl:-translate-y-1/2"
+            width="404"
+            height="384"
+            fill="none"
+            viewBox="0 0 404 384"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern
+                id="64e643ad-2176-4f86-b3d7-f2c5da3b6a6d"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect
+                  x="0"
+                  y="0"
+                  width="4"
+                  height="4"
+                  class="text-purple-500"
+                  fill="currentColor"
+                />
+              </pattern>
+            </defs>
+            <rect
+              width="404"
+              height="384"
+              fill="url(#64e643ad-2176-4f86-b3d7-f2c5da3b6a6d)"
+            />
+          </svg>
+        </div>
+        <div
+          class="relative mx-auto max-w-md space-y-6 py-12 px-6 sm:max-w-3xl sm:py-16 lg:col-span-6 lg:col-start-4 lg:max-w-none lg:p-0"
+        >
+          <h2
+            class="text-3xl font-bold tracking-tight text-white"
+            id="join-heading"
+          >
+            Fish Tales: A podcast with Lee Trout
+          </h2>
+          <p class="text-lg text-white">
+            I've invited various folks to chat with me on a range of topics.
+            Usually tech related, but not always. Below you will find show notes
+            and background on each episode. Or visit the podcast site to
+            subscribe via RSS.
+          </p>
+          <p class="text-lg text-white">
+            Fish Tales can be found on YouTube & Spotify.
+          </p>
+          <a
+            class="block w-full rounded-md border border-transparent bg-white py-3 px-5 text-center text-base font-medium text-purple-700 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
+            href="https://fishtales.leetrout.com"
+            target="_blank"
+            >Visit podcast feed site</a
+          >
+          <!-- TODO: Add social links -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center">
+  <div class="overflow-hidden rounded-md border border-gray-300 bg-white w-3/5">
+    <ul role="list" class="divide-y divide-gray-300">
+      {{ $len := len $.Pages }} {{ range $idx, $page := sort .Pages "Weight"
+      "desc" }}
+      <li class="px-4 py-4 sm:px-6">
+        <div class="flex">
+          <div class="mr-4 flex-shrink-0 self-center">
+            {{ $image := $page.Resources.GetMatch "*cover.jpg" }}
+            <a href="{{ .RelPermalink }}">
+              <img width="100" src="{{ $image.RelPermalink }}" />
+            </a>
+          </div>
+          <div>
+            <a href="{{ .RelPermalink }}">
+              <h4 class="text-lg font-bold">
+                {{ if eq $idx 0 }}
+                <span
+                  class="inline-flex items-center rounded-full bg-purple-100 px-2.5 py-0.5 text-xs font-medium text-purple-800"
+                  >Latest</span
+                >
+                {{end}} {{ $page.Params.classifier }}: {{ $page.Title }}
+                <span class="text-base text-slate-600 font-medium"
+                  >({{ time.Format "Jan 2, 2006" $page.Params.airdate }})</span
+                >
+              </h4>
+            </a>
+            <p class="mt-1">{{ $page.Content | truncate 100}}</p>
+          </div>
+        </div>
+      </li>
+      {{ end}}
+    </ul>
+  </div>
+</div>
+
+{{ end}}

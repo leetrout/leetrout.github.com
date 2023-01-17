@@ -1,0 +1,23 @@
+{{ $scripts := resources.Get "scripts.js" }}
+<script>
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+    localStorage.theme = "dark";
+  } else {
+    document.documentElement.classList.remove("dark");
+    localStorage.theme = "light";
+  }
+</script>
+<script defer src="{{ $scripts.Permalink }}"></script>
+
+{{ $style := resources.Get "styles.css" | fingerprint }}
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="{{ $style.Permalink }}"
+  integrity="{{ $style.Data.Integrity }}"
+/>

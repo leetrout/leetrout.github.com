@@ -2,12 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/fishtales/e0/</loc>
+    <lastmod>2023-01-15T14:27:19-05:00</lastmod>
+  </url><url>
+    <loc>/fishtales/e1/</loc>
+    <lastmod>2023-01-15T14:27:24-05:00</lastmod>
+  </url><url>
+    <loc>/fishtales/</loc>
+    <lastmod>2023-01-15T14:19:28-05:00</lastmod>
+  </url><url>
     <loc>/</loc>
-    <priority>0</priority>
+    <lastmod>2023-01-15T14:18:21-05:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-  </url><url>
-    <loc>/</loc>
   </url><url>
     <loc>/tags/</loc>
   </url>

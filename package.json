@@ -6,9 +6,10 @@
   "scripts": {
     "build-styles": "npx tailwindcss -i ./assets/base.css -o ./assets/styles.css",
     "bundle": "esbuild index.js --bundle --outfile=assets/scripts.js --minify --sourcemap",
-    "build-hugo": "hugo -d docs",
+    "build-hugo": "hugo -d docs --printPathWarnings --printUnusedTemplates --cleanDestinationDir",
     "build": "npm run build-styles && npm run bundle && npm run build-hugo",
-    "watch": "find . -wholename \"./layouts/*\" -name \"*.html\" -o -name \"index.js\" ! -path \"./node_modules/*\" | entr -r npm run build"
+    "watch": "find . -name '*.js' -o -name '*.md' -o -name '*.html' | grep -Ev '(node_modules|docs|assets)' | entr -ccdr npm run build",
+    "server": "cd docs && python -m http.server 1313"
   },
   "repository": {
     "type": "git",
@@ -22,8 +23,11 @@
   },
   "homepage": "https://github.com/leetrout/leetrout.github.com#readme",
   "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/typography": "^0.5.9",
     "esbuild": "0.16.15",
-    "prettier": "^2.8.2",
+    "prettier": "^2.8.3",
+    "prettier-plugin-go-template": "^0.0.13",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {

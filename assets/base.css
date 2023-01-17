@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    li.rc-scout > p.rc-scout__text {
+        @apply text-zinc-300 text-sm;
+    }
+}

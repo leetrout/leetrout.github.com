@@ -18,4 +18,11 @@ Alpine.data("themeswitcher", () => ({
   },
 }));
 
+Alpine.data("mobilemenu", () => ({
+  mmopen: false,
+  toggle() {
+    console.log("toggle called");
+  },
+}));
+
 Alpine.start();

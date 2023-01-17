@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Lee Trout</title>
-    <link>/</link>
-    <description>Recent content on Lee Trout</description>
+    <title>Fish Tales on Lee Trout</title>
+    <link>/fishtales/</link>
+    <description>Recent content in Fish Tales on Lee Trout</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 15 Jan 2023 14:18:21 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Jan 2023 14:19:28 -0500</lastBuildDate><atom:link href="/fishtales/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Episode Zero</title>
       <link>/fishtales/e0/</link>
