@@ -2,3 +2,7 @@ baseURL = ''
 languageCode = 'en-us'
 title = 'Lee Trout'
 enableEmoji = true
+
+[markup.goldmark.parser.attribute]
+block = true
+title = true
