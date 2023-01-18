@@ -6,3 +6,6 @@ enableEmoji = true
 [markup.goldmark.parser.attribute]
 block = true
 title = true
+
+[privacy.youtube]
+privacyEnhanced = true

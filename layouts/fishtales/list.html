@@ -224,7 +224,9 @@
                     >
                   </h4>
                 </a>
-                <p class="mt-1">{{ $page.Content | truncate 100 }}</p>
+                <p class="mt-1">
+                  {{ $page.Content | plainify | htmlUnescape | truncate 100 }}
+                </p>
               </div>
             </div>
           </li>

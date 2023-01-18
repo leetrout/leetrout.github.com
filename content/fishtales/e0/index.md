@@ -6,9 +6,10 @@ type: fishtales
 classifier: Episode 0
 weight: 1
 airdate: 2023-01-15
-youtube: https://www.youtube.com/embed/Jca2hfmiou4
 teaser: And so it begins...
 ---
+
+{{< youtube Jca2hfmiou4 >}}
 
 Episode Zero is the preview of what is to come in the Fish Tales podcast.
 
