@@ -1,6 +1,6 @@
 {{ define "header" }}""{{ end }}
 {{ define "main" }}
-  <div class="relative bg-white py-16">
+  <div class="relative bg-white lg:py-16">
     <div
       class="absolute inset-x-0 top-0 hidden h-1/2 bg-gray-50 lg:block"
       aria-hidden="true"
@@ -191,9 +191,9 @@
     </div>
   </div>
 
-  <div class="flex justify-center">
+  <div class="flex lg:justify-center">
     <div
-      class="overflow-hidden rounded-md border border-gray-300 bg-white w-3/5"
+      class="overflow-hidden rounded-md border border-gray-300 bg-white sm:w-full lg:w-3/5"
     >
       <ul role="list" class="divide-y divide-gray-300">
         {{ $len := len $.Pages }}
@@ -201,7 +201,7 @@
           "desc"
         }}
           <li class="px-4 py-4 sm:px-6">
-            <div class="flex">
+            <div class="sm:flex">
               <div class="mr-4 flex-shrink-0 self-center">
                 {{ $image := $page.Resources.GetMatch "*cover.jpg" }}
                 <a href="{{ .RelPermalink }}">

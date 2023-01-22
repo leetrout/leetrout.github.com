@@ -1190,13 +1190,13 @@ video {
   --tw-prose-invert-links: #6366f1;
 }
 
-.aspect-w-12 {
+.aspect-w-1 {
   position: relative;
   padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
-  --tw-aspect-w: 12;
+  --tw-aspect-w: 1;
 }
 
-.aspect-w-12 > * {
+.aspect-w-1 > * {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -1206,8 +1206,8 @@ video {
   left: 0;
 }
 
-.aspect-h-7 {
-  --tw-aspect-h: 7;
+.aspect-h-1 {
+  --tw-aspect-h: 1;
 }
 
 .aspect-w-10 {
@@ -1449,10 +1449,6 @@ li.rc-scout > p.rc-scout__text {
 
 .w-6 {
   width: 1.5rem;
-}
-
-.w-3\/5 {
-  width: 60%;
 }
 
 .w-full {
@@ -1734,11 +1730,6 @@ li.rc-scout > p.rc-scout__text {
   padding: 0.5rem;
 }
 
-.py-16 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -1792,6 +1783,11 @@ li.rc-scout > p.rc-scout__text {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .px-3 {
@@ -2087,8 +2083,16 @@ li.rc-scout > p.rc-scout__text {
 }
 
 @media (min-width: 640px) {
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:w-auto {
     width: auto;
+  }
+
+  .sm\:w-full {
+    width: 100%;
   }
 
   .sm\:max-w-3xl {
@@ -2174,10 +2178,6 @@ li.rc-scout > p.rc-scout__text {
     display: grid;
   }
 
-  .md\:hidden {
-    display: none;
-  }
-
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2257,6 +2257,10 @@ li.rc-scout > p.rc-scout__text {
     height: 100%;
   }
 
+  .lg\:w-3\/5 {
+    width: 60%;
+  }
+
   .lg\:w-full {
     width: 100%;
   }
@@ -2285,6 +2289,10 @@ li.rc-scout > p.rc-scout__text {
     align-items: center;
   }
 
+  .lg\:justify-center {
+    justify-content: center;
+  }
+
   .lg\:gap-8 {
     gap: 2rem;
   }
@@ -2310,14 +2318,14 @@ li.rc-scout > p.rc-scout__text {
     padding: 0px;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .lg\:py-16 {
     padding-top: 4rem;
     padding-bottom: 4rem;
+  }
+
+  .lg\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .lg\:pb-28 {

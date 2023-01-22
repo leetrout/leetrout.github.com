@@ -1,3 +1,4 @@
 hugo 0.109.0
 nodejs lts
 python 3.10.7
+cloudflared 2023.1.0
