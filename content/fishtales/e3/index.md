@@ -9,12 +9,12 @@ airdate: 2023-02-15
 
 {{< youtube 5NVI6BoLrzI >}}
 
-Andrew Welch is a developer and the host of [devMode.fm](https://devmode.fm), a podcast dedicated
-to modern web development. He's been working in technology for years and we explored
-his experience working in development and transisioning over to training.
+Andrew Welch is a developer and the host of [devMode.fm](https://devmode.fm), a
+podcast dedicated to modern web development. He's been working in technology for
+years and we explored his experience working in development and transitioning
+over to training.
 
-Andrew was instrumental in launching Fish Tales so once
-again, thank you Andrew!
+Andrew was instrumental in launching Fish Tales so once again, thank you Andrew!
 
 Links from the show:
 
