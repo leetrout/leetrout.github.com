@@ -1,0 +1,4 @@
+{
+    "MD032": false, // Blank lines around lists
+    "MD034": false // No bare urls
+}
