@@ -15,8 +15,6 @@ patient enough to walk me through all the various aspects of her blog including
 the origin story and what she has to do to keep things running. It was a blast
 to learn about it and hear it all directly from her!
 
-Andrew was instrumental in launching Fish Tales so once again, thank you Andrew!
-
 Links from the show:
 
 - [Baking Basics](https://stressbaking.com/category/baking-basics/)
