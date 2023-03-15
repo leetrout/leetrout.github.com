@@ -26,6 +26,7 @@ Connect with Haroun:
 
 Links from the show:
 
+- [Zenith Patrol](https://zenithpatrol.bandcamp.com/releases)
 - [Victor Little](https://victorlittlemusic.com/)
 - [Victor Little - Chasing Time](https://www.youtube.com/watch?v=J5jvAXHYBck)
 - [Billie Eilish Production](https://www.youtube.com/watch?v=gI5HOHEnal8)
