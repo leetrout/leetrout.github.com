@@ -7,6 +7,8 @@ weight: 6
 airdate: 2023-03-15
 ---
 
+{{< youtube FPAwYKIoc3Q >}}
+
 Haroun is a principal software engineer and sound engineer. We had a great chat
 about his background in sound engineering and some of the artists he's worked
 with over the years before diving into our opinions on various aspects of
