@@ -21,6 +21,7 @@ conversations in addition to this one we captured to share with the world!
 
 Connect with Haroun:
 
+- [https://harounserang.com/](https://harounserang.com/)
 - [https://www.linkedin.com/in/harounserang/](https://www.linkedin.com/in/harounserang/)
 - [https://soundcloud.com/hserang](https://soundcloud.com/hserang)
 
