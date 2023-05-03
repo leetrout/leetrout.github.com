@@ -3,7 +3,7 @@ title: "Adam Allred & Infrastructure Engineering"
 date: 2023-04-05T09:00:00-04:00
 draft: false
 classifier: Episode 6
-weight: 6
+weight: 7
 airdate: 2023-04-05
 ---
 

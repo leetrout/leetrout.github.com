@@ -60,13 +60,12 @@ Baking Basics How to calibrate your oven B.</description>
     </item>
     
     <item>
-      <title>Alvin Huang: Infrastructure &amp; Release Engineering</title>
-      <link>/fishtales/e7/</link>
-      <pubDate>Wed, 19 Apr 2023 10:00:00 -0500</pubDate>
+      <title>Haroun Serang: Music Production, coding &amp; philosophy</title>
+      <link>/fishtales/e5/</link>
+      <pubDate>Mon, 13 Mar 2023 10:00:00 -0500</pubDate>
       
-      <guid>/fishtales/e7/</guid>
-      <description>Alvin is a release engineering manager at HashiCorp and we met back before the pandemic in 2020. In this episode we explore Alvin&amp;rsquo;s past from sledding on cafeteria trays to working on data center tech to what he does day to day at work. We nerd out a bit on infrastucture management, tooling, developer experience and more!
-Alvin it was a blast to reconnect and record this conversation! Thank you!</description>
+      <guid>/fishtales/e5/</guid>
+      <description>Haroun is a principal software engineer and sound engineer. We had a great chat about his background in sound engineering and some of the artists he&amp;rsquo;s worked with over the years before diving into our opinions on various aspects of software engineering. Haroun is one of those people that will always leave you wanting to learn more as he has such a broad knowledge base that covers so many topics.</description>
     </item>
     
     <item>
@@ -79,12 +78,22 @@ Alvin it was a blast to reconnect and record this conversation! Thank you!</desc
     </item>
     
     <item>
-      <title>Haroun Serang: Music Production, coding &amp; philosophy</title>
-      <link>/fishtales/e5/</link>
-      <pubDate>Mon, 13 Mar 2023 10:00:00 -0500</pubDate>
+      <title>Alvin Huang: Infrastructure &amp; Release Engineering</title>
+      <link>/fishtales/e7/</link>
+      <pubDate>Wed, 19 Apr 2023 10:00:00 -0500</pubDate>
       
-      <guid>/fishtales/e5/</guid>
-      <description>Haroun is a principal software engineer and sound engineer. We had a great chat about his background in sound engineering and some of the artists he&amp;rsquo;s worked with over the years before diving into our opinions on various aspects of software engineering. Haroun is one of those people that will always leave you wanting to learn more as he has such a broad knowledge base that covers so many topics.</description>
+      <guid>/fishtales/e7/</guid>
+      <description>Alvin is a release engineering manager at HashiCorp and we met back before the pandemic in 2020. In this episode we explore Alvin&amp;rsquo;s past from sledding on cafeteria trays to working on data center tech to what he does day to day at work. We nerd out a bit on infrastucture management, tooling, developer experience and more!
+Alvin it was a blast to reconnect and record this conversation! Thank you!</description>
+    </item>
+    
+    <item>
+      <title>Josh Goldberg: TypeScript, Authoring a Book and Full Time Open Source Development</title>
+      <link>/fishtales/e8/</link>
+      <pubDate>Wed, 03 May 2023 06:00:00 -0500</pubDate>
+      
+      <guid>/fishtales/e8/</guid>
+      <description>So I show up to All Things Open &amp;lsquo;22 and in the first session of the community leadership summit I see a fella in a purple teletubby costume. It happened to be Halloween and this fella was none other than Josh Goldberg. I had a blast at the conference, thoroughly enjoyed the time I got to spend with Josh and attending his talk and it was truly an honor to get so much of Josh&amp;rsquo;s time to record this episode.</description>
     </item>
     
   </channel>
